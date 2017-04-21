@@ -69,6 +69,12 @@ void handle_command(char *msg) {
     } else if (strncmp(msg, "MWD", 3) == 0) {
         /* MOUSE WHEEL DOWN */
         xdo_click_window(xd, CURRENTWINDOW, 5);
+    }else if (strncmp(msg, "MCH", 3) == 0) {
+        /* MOUSE CLICK LEFT HOLD */
+        xdo_mouse_down(xd, CURRENTWINDOW, 1);
+    } else if (strncmp(msg, "MCR", 3) == 0) {
+        /* MOUSE CLICK LEFT RELEASE */
+        xdo_mouse_up(xd, CURRENTWINDOW, 1);
     }
 }
 
